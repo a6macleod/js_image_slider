@@ -1,0 +1,27 @@
+body {
+	margin: 0;
+	background: #00334d;
+}
+
+.main-container {
+	width: 500px;
+	height: 500px;
+	background: #3399ff;
+	margin: 10% auto;
+}
+
+.wide-image-container {
+	margin: 0 auto;
+	background: #cce6ff;
+	height: 100%;
+	width: 90%;
+	display: flex;
+	overflow: hidden;
+}
+
+.image {
+	border: 1px solid #005580;
+	display: flex;
+	width: 33.333333%;
+	overflow: hidden;
+}
