@@ -3,25 +3,87 @@ body {
 	background: #00334d;
 }
 
-.main-container {
-	width: 500px;
-	height: 500px;
+.main-container-portrait {
+	height: 550px;
+	width: 350px;
 	background: #3399ff;
-	margin: 10% auto;
+	overflow: hidden;
+	margin: 30px auto;
+}
+
+.main-container-landscape {
+	height: 400px;
+	width: 600px;
+	background: #3399ff;
+	overflow: hidden;
+	margin: 30px auto;
 }
 
 .wide-image-container {
 	margin: 0 auto;
 	background: #cce6ff;
 	height: 100%;
-	width: 90%;
+	width: 2400px;
 	display: flex;
 	overflow: hidden;
+	position: relative;
 }
 
 .image {
 	border: 1px solid #005580;
 	display: flex;
-	width: 33.333333%;
 	overflow: hidden;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.portrait {
+    height: 800px;
+    width: 400px;
+}
+
+.landscape {
+    height: 400px;
+    width: 700px;
+}
+
+.image-view-one {
+	/*landscape*/
+}
+.image-view-two {
+	/*portrait*/
+	right: 645px;
+}
+.image-view-three {
+	/*portrait*/
+	right: 1020px;	
+}
+.image-view-four {
+	/*portrait*/
+	right: 1390px;
+}
+.image-view-five {
+	/*landscape*/
+	right: 1790px;
+}
+
+.image-selector-container {
+	text-align: center;
+}
+
+.image-selector {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	margin: 0 5px;
+	background: #9999ff;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.selected-image-selector {
+	background: #0039e6;
 }
