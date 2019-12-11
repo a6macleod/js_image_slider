@@ -7,8 +7,8 @@
 </head>
 <body>
 
-	<div class="main-container-landscape ">
-		<div class="wide-image-container image-view-one">
+	<div id="main-container" class="main-container main-container-landscape">
+		<div id="wide-image-container" class="image-view-one">
 			<div class="image image-one">
 				<img class="landscape" src="images/daniel-monteiro-HwNCyLWw7hw-unsplash.jpg" alt="Woman infront of neon sign that reads 'slow down'">
 				<!-- <p><cite>Photo by Daniel Monteiro on Unsplash</cite></p> -->
@@ -36,11 +36,36 @@
 		</div>
 	</div>
 	<div class="image-selector-container">
-		<div class="image-selector image-selector-1 selected-image-selector"><a href="#" title="Slide show first image"></a></div>
-		<div class="image-selector image-selector-2"><a href="#" title="Slide show second image"></a></div>
-		<div class="image-selector image-selector-3"><a href="#" title="Slide show third image"></a></div>
-		<div class="image-selector image-selector-4"><a href="#" title="Slide show fourth image"></a></div>
-		<div class="image-selector image-selector-5"><a href="#" title="Slide show fifth image"></a></div>
+		<div class="image-selector image-selector-1 selected-image-selector" 
+		data-orientation="landscape" 
+		data-number=1>
+			<a href="#" title="Slide show first image"></a>
+		</div>
+		
+		<div class="image-selector image-selector-2" 
+		data-orientation="portrait" 
+		data-number=2>
+			<a href="#" title="Slide show second image"></a>
+		</div>
+		
+		<div class="image-selector image-selector-3" 
+		data-orientation="portrait" 
+		data-number=3>
+			<a href="#" title="Slide show third image"></a>
+		</div>
+		
+		<div class="image-selector image-selector-4" 
+		data-orientation="portrait" 
+		data-number=4>
+			<a href="#" title="Slide show fourth image"></a>
+		</div>
+		
+		<div class="image-selector image-selector-5" 
+		data-orientation="landscape" 
+		data-number=5>
+			<a href="#" title="Slide show fifth image"></a>
+		</div>
+
 	</div>
 	
 </body>

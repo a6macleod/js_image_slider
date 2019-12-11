@@ -19,7 +19,7 @@ body {
 	margin: 30px auto;
 }
 
-.wide-image-container {
+#wide-image-container {
 	margin: 0 auto;
 	background: #cce6ff;
 	height: 100%;
@@ -50,22 +50,22 @@ img {
     width: 700px;
 }
 
-.image-view-one {
+.image-view-1 {
 	/*landscape*/
 }
-.image-view-two {
+.image-view-2 {
 	/*portrait*/
 	right: 645px;
 }
-.image-view-three {
+.image-view-3 {
 	/*portrait*/
 	right: 1020px;	
 }
-.image-view-four {
+.image-view-4 {
 	/*portrait*/
 	right: 1390px;
 }
-.image-view-five {
+.image-view-5 {
 	/*landscape*/
 	right: 1790px;
 }
