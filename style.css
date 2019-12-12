@@ -3,8 +3,12 @@ body {
 	background: #00334d;
 }
 
+#main-container {
+	box-shadow: 10px 10px 20px #000d33;
+}
+
 .main-container-portrait {
-	height: 550px;
+	height: 500px;
 	width: 350px;
 	background: #3399ff;
 	overflow: hidden;
