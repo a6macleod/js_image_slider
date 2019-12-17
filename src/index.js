@@ -1,7 +1,10 @@
 const imageSelector = document.querySelectorAll(".image-selector");
 const mainContainer = document.querySelector("#main-container");
 const viewer = document.querySelector("#wide-image-container");
-let imageIntevalTimer = setInterval(nextImage, 5000);
+const arrowButtons = document.querySelectorAll(".arrow");
+const rightArrow = document.querySelector(".right-arrow");
+const leftArrow = document.querySelector(".left-arrow");
+let imageIntevalTimer;
 
 function updateImage(selector) {
   const orientation = selector.getAttribute("data-orientation");
@@ -31,17 +34,33 @@ function nextImage() {
   selectAnImage(nextSlide);
 }
 
-function selectAnImage(selectedImage) {
+function updateCurrentImageSelector (selectedImage) {
   imageSelector.forEach(selector =>
     selector.classList.remove("selected-image-selector")
   );
   selectedImage.classList.add("selected-image-selector");
+}
 
+function selectAnImage(selectedImage) {
+  updateCurrentImageSelector(selectedImage);
   updateImage(selectedImage);
 }
 
 function clickSelector() {
   selectAnImage(this);
+}
+
+function clickLeftArrow () {
+  const currentSlide = document.querySelector(".selected-image-selector");
+  let nextImageNumber = parseInt(currentSlide.getAttribute("data-number")) - 1;
+  if (nextImageNumber < 1) {
+    nextImageNumber = imageSelector.length;
+  }
+
+  const nextSlide = document.querySelector(
+    `.image-selector-${nextImageNumber}`
+  );
+  selectAnImage(nextSlide);
 }
 
 function startTimer() {
@@ -52,6 +71,8 @@ function endTimer() {
   clearInterval(imageIntevalTimer);
 }
 
+startTimer();
+
 imageSelector.forEach(selector =>
   selector.addEventListener("click", clickSelector)
 );
@@ -61,3 +82,11 @@ imageSelector.forEach(selector =>
 imageSelector.forEach(selector =>
   selector.addEventListener("mouseout", startTimer)
 );
+arrowButtons.forEach(arrow => 
+  arrow.addEventListener("mouseenter", endTimer)
+);
+arrowButtons.forEach(arrow => 
+  arrow.addEventListener("mouseout", startTimer)
+);
+rightArrow.addEventListener("click", nextImage);
+leftArrow.addEventListener("click", clickLeftArrow);
