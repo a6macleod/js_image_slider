@@ -91,3 +91,30 @@ img {
 .selected-image-selector {
 	background: #0039e6;
 }
+
+.arrow {
+	position: absolute;
+	font-size: 200%;
+	top: 30%;
+}
+.arrow a {
+	color: white;
+	text-decoration: none;
+}
+
+.arrow:hover {
+	transform: scale(1.2);
+}
+
+.left-arrow {
+	left: 15%;
+}
+
+.right-arrow {
+	right: 15%;
+	transform: scaleX(-1);
+}
+
+.right-arrow:hover {
+	transform: scaleX(-1) scale(1.2);
+}
