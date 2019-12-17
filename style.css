@@ -92,17 +92,18 @@ img {
 	background: #0039e6;
 }
 
-.arrow {
+.arrow-container {
 	position: absolute;
 	font-size: 200%;
 	top: 30%;
+	width: 40px;
 }
-.arrow a {
+.arrow-container a {
 	color: white;
 	text-decoration: none;
 }
 
-.arrow:hover {
+.arrow-container:hover {
 	transform: scale(1.2);
 }
 
